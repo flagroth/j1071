@@ -213,6 +213,7 @@ void svmtrain (double *x, int *r, int *c,
 	       int    *cross,
 	       int    *sparse,
 	       int    *probability,
+	       int    *iter,
 	       
 	       int    *nclasses,
 	       int    *nr,
@@ -256,6 +257,7 @@ void svmtrain (double *x, int *r, int *c,
     par.p           = *epsilon;
     par.shrinking   = *shrinking;
     par.probability = *probability;
+    par.iter	    = *iter;
 
     /* set problem */
     prob.l = *r;

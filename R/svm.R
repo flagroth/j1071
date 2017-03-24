@@ -60,6 +60,7 @@ function (x,
           cross       = 0,
           probability = FALSE,
           fitted      = TRUE,
+	        iter	      = 1000000, # Número de iteraciones a realizar
           ...,
           subset,
           na.action = na.omit)
@@ -273,7 +274,7 @@ function (x,
                 as.integer (cross),
                 as.integer (sparse),
                 as.integer (probability),
-		as.integer (iter),
+		            as.integer (iter),
 
                 ## results
                 nclasses = integer  (1),

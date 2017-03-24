@@ -44,6 +44,7 @@ svmtrain (double *x, int *r, int *c,
           int    *cross,
           int    *sparse,
           int    *probability,
+	        int    *iter,
 	       
           int    *nclasses,
           int    *nr,
@@ -123,13 +124,13 @@ static const R_CMethodDef CEntries[] = {
     {"cshell", (DL_FUNC) &cshell, 15},
     {"e1071_floyd", (DL_FUNC) &e1071_floyd, 4},
     {"svmpredict", (DL_FUNC) &svmpredict, 30},
-    {"svmtrain", (DL_FUNC) &svmtrain, 37},
+    {"svmtrain", (DL_FUNC) &svmtrain, 38},
     {"svmwrite", (DL_FUNC) &svmwrite, 21},
     {"ufcl", (DL_FUNC) &ufcl, 15},
     {NULL, NULL, 0}
 };
 
-void R_init_e1071(DllInfo *dll)
+void R_init_j1071(DllInfo *dll)
 {
     R_registerRoutines(dll, CEntries, NULL, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
